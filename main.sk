@@ -1,0 +1,31 @@
+package compile
+
+    import javax.swing.*
+    import javax.utils.semantic
+    import javax.swing.*
+
+class javaFile (JFrame):
+
+    @Constructor
+    def javaFile ():
+        this.setTitle('Esta es mi ventana')
+        this.setSize(1000 , 1000)
+        this.setLocationRelativeTo(null)
+    end
+
+    @main(String args[]):
+        javaFile miVentana = new javaFile()
+        if (isPermissions()):
+            miVentana.setVisibility(true)
+        end
+    end
+
+    def boolean isPermissions ():
+        if (new File('firPermissions')):
+            return true
+        end
+        else:
+            return false
+        end
+    end
+end
